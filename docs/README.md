@@ -35,7 +35,7 @@ See [examples/python.md](examples/python.md), [examples/typescript.md](examples/
 
 ### Option 2 — API Key
 
-Partners with a pre-issued API key can authenticate by including it as a request header. The key bypasses x402 — no wallet or payment is required.
+Authenticate by including your API key as a request header. The key bypasses x402 — no wallet or payment is required.
 
 ```
 X-API-Key: your_api_key
