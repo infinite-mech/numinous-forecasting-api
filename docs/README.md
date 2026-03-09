@@ -41,7 +41,7 @@ Partners with a pre-issued API key can authenticate by including it as a request
 X-API-Key: your_api_key
 ```
 
-API keys are issued directly by Numinous and are not self-serve. Contact the team to request access.
+API keys are self-serve. Create and revoke keys at [eversight.numinouslabs.io/api-keys](https://eversight.numinouslabs.io/api-keys). Each account can hold up to 5 active keys.
 
 ---
 
@@ -63,6 +63,16 @@ X-API-Key: <your_api_key>                 ← API key auth (alternative)
 **Request Body**
 
 The body supports two mutually exclusive modes: **structured mode** and **query mode**.
+
+#### Optional Parameters
+
+These apply to both modes.
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `agent_version_id` | `string (UUID)` | No | Pin the forecast to a specific miner agent version. When omitted, pool-based miner selection is used automatically. Version IDs can be found on the [Numinous leaderboard](https://leaderboard.numinouslabs.io) — navigate to any miner's page and copy the version ID from the agent code viewer. |
+
+> **Tip:** Open any miner on the [leaderboard](https://leaderboard.numinouslabs.io), select a code version from the dropdown, and click **Copy Version ID**.
 
 #### Structured Mode
 
